@@ -1,23 +1,44 @@
 // IF nested HTML
-const parent = React.createElement('div', { id: 'parent' }, [
-    React.createElement('div', { id: 'child' }, [
-        React.createElement('h1', {}, "I am a h1 tag"),
-        React.createElement('h2', {}, "I am a h2 tag")
-    ]),
-    React.createElement('div', { id: 'child2' }, [
-        React.createElement('h1', {}, "I am a h1 tag"),
-        React.createElement('h2', {}, "I am a h2 tag")
-    ])
-])
-console.log(parent)
+import React from "react"
+import ReactDOM from "react-dom/client"
 
-  
-// const heading = React.createElement('h1',
-//     { id: "heading", xyz: "numbers" },
-//     "Hello World from React")
+//* React element
 
-// console.log(heading)  // This will give OBJECT
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+//* JSX - HTML like syntex or XML Like
+//* JSX - Transpiled(convert) before it reaches the js engine- PARCEL - Babel
+//* JSX => React.createElement => ReactElement- JS Object => HTMLElement(render)
 
-root.render(parent)    
+
+
+//! React Element
+const heading = <p className="heading">Namaste React in JSX 🚀</p>
+console.log(heading)
+
+
+//! React Functional Component
+const Title = () => (
+    <h1 className="head">
+        {heading}
+        Namsate React Using JSX 🚀
+    </h1>
+)
+ 
+let number = 10000
+
+const HeadingComponent = () => (
+    <div id="container">
+        {Title()}
+        <Title/>
+        <h1 className="heading">Namaste React Functional Component 🚀</h1>
+    </div>
+)
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(jsxheading);
+
+
+root.render(<HeadingComponent />)
+
+ 

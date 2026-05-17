@@ -1,0 +1,32 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Nitin Purohit",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/nitinpurohit412/Namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/nitinpurohit412/Namaste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinpurohit412/Namaste-react.git"
+  },
+  "license": "ISC",
+  "author": "Nitin Purohit",
+  "type": "commonjs",
+  "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test": "jest"
+
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}

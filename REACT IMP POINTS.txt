@@ -1,0 +1,24 @@
+REACT IMP POINTS --->
+
+ a) npm install -
+	There are 2 types of packages/dependency-
+	1- Dev : It is generally required in development phase.
+	2- normal : Used in production.
+
+
+ b) IF u have package.json and package-lock.json u can recreate all ur node-modules even if delete my modules.
+
+ c) Just like we have "npm", we have similar name as "npx". When we do npm we are just calling the command of npm. npx means executing our package.
+
+d)  JSX - HTML like syntex or XML Like
+    JSX - Transpiled(convert) before it reaches the js engine- PARCEL - Babel
+    JSX => React.createElement => ReactElement- JS Object => HTMLElement(render)
+
+e)  React Component -
+      Class Based Component - Old way.
+      Functional Component - New Way.
+
+f)  1) React element is started with small letter.
+    2) React component should start with capital letter otherwise it will throw error.
+
+g) Way to render a react component --> root.render(<component/>.
