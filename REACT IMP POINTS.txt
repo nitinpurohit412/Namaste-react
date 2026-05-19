@@ -22,3 +22,6 @@ f)  1) React element is started with small letter.
     2) React component should start with capital letter otherwise it will throw error.
 
 g) Way to render a react component --> root.render(<component/>.
+
+h) Always give a "KEY" when ur looping.    // IMPORTANT
+i) Never use "INDEX" as KEY in react
