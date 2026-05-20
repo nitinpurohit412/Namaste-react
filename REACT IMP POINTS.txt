@@ -25,3 +25,5 @@ g) Way to render a react component --> root.render(<component/>.
 
 h) Always give a "KEY" when ur looping.    // IMPORTANT
 i) Never use "INDEX" as KEY in react
+
+j) Whenever the state variable changes then react re-renders this component.

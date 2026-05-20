@@ -1,43 +1,3 @@
-// IF nested HTML
-import React from "react"
-import ReactDOM from "react-dom/client"
-
-
-const Header = ()=>{
-    return(
-        <div className="header">
-            <div className="logo-container">
-                <img className="logo"
-                 src="https://thumbs.dreamstime.com/b/food-delivery-logo-images-illustration-design-270991508.jpg"/>
-            </div>
-
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
-
-const RestaurantCard = (props)=>{
-    const {resData} = props
-
-    const {name, cuisines, avgRating, costForTwo} = resData?.info
-    return (
-        <div className="res-card">
-            <img className="foodimg" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/6/16/8ac5f9c7-3ede-4c1b-abfd-0bd6b7baa467_53476.jpg"/>
-             <h3>{name}</h3>
-             <h4>{cuisines.join(", ")}</h4>
-             <h5>{avgRating}rating</h5>
-             <h5>{costForTwo}</h5>
-        </div>
-    )
-}
-
 const resList = 
 [
 {
@@ -54,7 +14,7 @@ const resList =
                 "Sweets",
                 "Snacks"
               ],
-              "avgRating": 4.7,
+              "avgRating": 3.5,
               "veg": true,
               "parentId": "536658",
               "avgRatingString": "4.7",
@@ -183,7 +143,7 @@ const resList =
                 "Shakes",
                 "Beverages"
               ],
-              "avgRating": 4.3,
+              "avgRating": 3.3,
               "veg": true,
               "parentId": "387975",
               "avgRatingString": "4.3",
@@ -681,7 +641,7 @@ const resList =
                 "Desserts",
                 "Ice Cream"
               ],
-              "avgRating": 4.4,
+              "avgRating": 3.4,
               "veg": true,
               "parentId": "2233",
               "avgRatingString": "4.4",
@@ -799,36 +759,5 @@ const resList =
           }
         ]
 
-const Body = ()=>{
-    return(
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="res-container">
-              {resList.map((restaurant)=> (
-                <RestaurantCard
-                key={restaurant.info.id}
-                 resData ={restaurant}/>
-              ))}
-            </div>
-        </div>
-    )
-}
 
-const AppLayout = ()=>{
-    return(
-        <div className="app">
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(jsxheading);
-
-root.render(<AppLayout/>)
-  
-
-  
+export default resList;

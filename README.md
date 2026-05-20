@@ -21,3 +21,23 @@
 - Tree Shaking - remove unused code
 - Diffrent dev and production modules
 This is Nitin
+
+
+# Two type of export/import
+
+-Default export/import
+
+export default component
+import component from "path"
+
+-Named export/import
+
+const export component
+import {component} from "path"
+
+
+# React Hooks
+(Normal JS utility function)
+
+-useState() - superpowerful state variable in react 
+-useEffect()
