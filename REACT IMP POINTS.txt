@@ -27,3 +27,5 @@ h) Always give a "KEY" when ur looping.    // IMPORTANT
 i) Never use "INDEX" as KEY in react
 
 j) Whenever the state variable changes then react re-renders this component.
+
+k) Whwnever state variable update, react triggers a reconciliation cycle (re-renders the component)
