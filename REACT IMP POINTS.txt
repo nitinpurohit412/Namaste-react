@@ -1,5 +1,6 @@
 REACT IMP POINTS --->
 
+@) how to download react - npm i react / npm i react-dom
  a) npm install -
 	There are 2 types of packages/dependency-
 	1- Dev : It is generally required in development phase.
@@ -29,3 +30,10 @@ i) Never use "INDEX" as KEY in react
 j) Whenever the state variable changes then react re-renders this component.
 
 k) Whwnever state variable update, react triggers a reconciliation cycle (re-renders the component)
+
+l) UseEffect() --->
+1) if there is no dependency array => useEffect is called on every render.
+2) if dependency array is empty [] => useEffect is called on initial render (just once).
+3) if dependency array is [btnNameReact] => called everytime btnNameReact is updated.
+
+m) Usestate is used to create local state variable inside a functional components.	

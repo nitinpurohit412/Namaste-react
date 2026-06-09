@@ -41,3 +41,9 @@ import {component} from "path"
 
 -useState() - superpowerful state variable in react 
 -useEffect()
+
+
+# 2 type of Routing in web apps
+
+- Client side routing
+- Server side routing
