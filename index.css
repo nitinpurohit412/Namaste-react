@@ -284,3 +284,10 @@ body {
         max-width: 340px;
     }
 } 
+
+.user-card{
+    margin: 15px;
+    padding:10px;
+    border: 1px solid black;
+    border-radius: 8px;
+}

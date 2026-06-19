@@ -37,3 +37,5 @@ l) UseEffect() --->
 3) if dependency array is [btnNameReact] => called everytime btnNameReact is updated.
 
 m) Usestate is used to create local state variable inside a functional components.	
+
+n) ComponentDidMount is uesd to make API calls....
