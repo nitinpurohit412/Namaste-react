@@ -14,13 +14,13 @@ const RestaurantCard = ({ resData }) => {
     } = resData;
 
     return (
-        <div className="res-card">
+        <div className="m-4 p-4 w-[270px] bg-[#f0f0f0] rounded-sm hover:bg-gray-200">
             <img
-                className="foodimg"
+                className="fooding rounded-lg"
                 alt={name}
                 src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
             />
-            <h3>{name}</h3>
+            <h3 className="font-bold py-2 text-lg">{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
             <h5>{avgRating} ⭐ rating</h5>
             <h5>{costForTwo}</h5>
