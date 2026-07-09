@@ -51,3 +51,13 @@ import {component} from "path"
 
 # Higher Order Component --->
 - Higher order component is a function that takes a component and enhances that component and returns back a new component..
+
+# Note -->
+- React and Redux are different libraries.
+
+# Redux -
+- Primarly used for handeling "state of application".
+- Redux offers easy debugging.
+
+# Selector --
+- Selector is just a hook in react.

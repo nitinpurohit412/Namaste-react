@@ -1,8 +1,17 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenu = () => {
+
+const dispatch = useDispatch()
+
+const handleAddItem = (dish)=>{
+  dispatch(addItem(dish))
+}
+
   const { resID } = useParams();
   const resInfo = useRestaurantMenu(resID);
 
@@ -93,7 +102,9 @@ const RestaurantMenu = () => {
                           className="w-36 h-36 object-cover rounded-xl shadow-md"
                         />
 
-                        <button className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-2 rounded-lg shadow-lg hover:bg-green-600 hover:text-white transition">
+                        <button className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-2 rounded-lg shadow-lg hover:bg-green-600 hover:text-white transition"
+                          onClick={()=> handleAddItem(dish)}
+                          >
                           ADD 
                         </button>
                       </div>

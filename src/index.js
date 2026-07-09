@@ -8,7 +8,9 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext";
-
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // Chunking
 // Code Splitting
@@ -33,12 +35,14 @@ const AppLayout = () => {
   },[])
 
   return (
+    <Provider  store={appStore}>
     <UserContext.Provider value={{loggedInUser : UserName, setUserName}}>
     <div className="app">   
       <Header />
       <Outlet />
     </div>
    </UserContext.Provider>
+   </Provider>
   );
 };
 
@@ -58,6 +62,7 @@ root.render(
           }/>
         <Route path="restaurants/:resID" element={<RestaurantMenu/>}/>
         <Route path="*" element={<Error />} />
+        <Route path="cart" element={<Cart/>}/>
       </Route>
     </Routes>
   </BrowserRouter>
