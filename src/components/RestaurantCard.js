@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import User from "./user";
+import UserContext from "../utils/UserContext";
+
+ 
 
 const RestaurantCard = ({ resData }) => {
 
+   const { loggedInUser } = useContext(UserContext);           
     // resData is now the flat info object directly (name, cuisines, avgRating, etc.)
     const {
         id,
@@ -14,6 +20,7 @@ const RestaurantCard = ({ resData }) => {
     } = resData;
 
     return (
+        
         <div className="m-4 p-4 w-[270px] bg-[#f0f0f0] rounded-sm hover:bg-gray-200">
             <img
                 className="fooding rounded-lg"
@@ -25,6 +32,7 @@ const RestaurantCard = ({ resData }) => {
             <h5>{avgRating} ⭐ rating</h5>
             <h5>{costForTwo}</h5>
             <h5>{sla?.slaString}</h5>
+            <h5>User : {loggedInUser}</h5>
         </div>
     );
 };

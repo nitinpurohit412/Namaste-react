@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchText, setSearchText] = useState("");
+    
+
 
     useEffect(() => {
         fetchData();
@@ -38,7 +41,7 @@ const Body = () => {
         <h1>Looks like you're offline!! Please check your internet connection..........</h1>
         )
 
-
+    const {loggedInUser, setUserName} = useContext(UserContext)
 
     return listOfRestaurants.length === 0 ? (
         <Shimmer />
@@ -71,14 +74,20 @@ const Body = () => {
                     className="px-4 py-1 bg-gray-200 rounded-2xl"
                     onClick={() => {
                         const filtered = listOfRestaurants.filter(
-                            (res) => res.avgRating > 4
-                        );
+                            (res) => res.avgRating > 4.5);
                         setFilteredRestaurant(filtered);
                     }}
                 >
                     Top Rated Restaurants
                 </button>
-                    </div>
+                        </div>
+                            <div className="search m-8 p-8 flex item-center">
+                                <label>User Name : </label>
+                            <input className="border border-black"
+                            value={loggedInUser}
+                            onChange={(e)=>{setUserName(e.target.value)}}
+                            />
+                            </div>
             </div>
 
             {/* Restaurant Cards */}

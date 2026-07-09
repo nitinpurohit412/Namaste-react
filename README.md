@@ -47,3 +47,7 @@ import {component} from "path"
 
 - Client side routing
 - Server side routing
+
+
+# Higher Order Component --->
+- Higher order component is a function that takes a component and enhances that component and returns back a new component..
