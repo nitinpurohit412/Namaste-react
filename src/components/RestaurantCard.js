@@ -8,7 +8,8 @@ import UserContext from "../utils/UserContext";
 const RestaurantCard = ({ resData }) => {
 
    const { loggedInUser } = useContext(UserContext);           
-    // resData is now the flat info object directly (name, cuisines, avgRating, etc.)
+    // resData is now the flat info object directly (name, cuisines, avgRating, etc.)]
+    // console.log(resData)
     const {
         id,
         name,
@@ -21,7 +22,7 @@ const RestaurantCard = ({ resData }) => {
 
     return (
         
-        <div className="m-4 p-4 w-[270px] bg-[#f0f0f0] rounded-sm hover:bg-gray-200">
+        <div data-testid="resCard" className="m-4 p-4 w-[250px] bg-[#f0f0f0] rounded-sm hover:bg-gray-200">
             <img
                 className="fooding rounded-lg"
                 alt={name}

@@ -17,7 +17,7 @@ const Header = () => {
 
     //*   Subscribing to the store using Selector
     const cartItems = useSelector((store)=> store.cart.items)
-    console.log(cartItems)
+    // console.log(cartItems)
 
     useEffect(() => {
     }, [btnNameReact]);

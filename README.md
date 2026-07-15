@@ -61,3 +61,18 @@ import {component} from "path"
 
 # Selector --
 - Selector is just a hook in react.
+
+# Type of testing (developer) -->
+- Unit Testing.
+- Integration Testing.
+- End to End Testing (e2e testing).
+
+# Setting up Testing in our app
+- Install React Testing library.
+- Install Jest.
+- Installed Babel dependencies.
+- Configure Babel.
+- Configure Parcel config file to disable default babel transpilation ("so i can use babel.config.js"). 
+- Jest configuration  (npx create-jest).
+- Install (@babel/preset-react) this library to make JSX work in test cases.
+- Inckude @babel/preset-react inside my babel config

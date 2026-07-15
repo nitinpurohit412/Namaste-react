@@ -105,7 +105,7 @@ const handleAddItem = (dish)=>{
                         <button className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-white text-green-600 font-bold px-6 py-2 rounded-lg shadow-lg hover:bg-green-600 hover:text-white transition"
                           onClick={()=> handleAddItem(dish)}
                           >
-                          ADD 
+                          ADD
                         </button>
                       </div>
                     )}
